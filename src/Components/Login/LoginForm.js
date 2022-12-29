@@ -9,7 +9,7 @@ function LoginForm() {
     const username = useForm();
     const password = useForm();
 
-    const { userLogin } = React.useContext(UserContext)
+    const { userLogin, error, loading } = React.useContext(UserContext)
 
     async function handleSubmit(event) {
         event.preventDefault()
@@ -23,7 +23,9 @@ function LoginForm() {
             <form action='' onSubmit={handleSubmit}>
                 <Input label="User" type="text" name="username" {...username} />
                 <Input label="Password" type="password" name="password" {...password} />
-                <Button>Entrar</Button>
+                {loading ? <button disabled>Carregando ...</button> : <Button>Entrar</Button>}
+
+                {error && <p>{error}</p>}
             </form>
             <Link to="/login/create">Cadastro</Link>
         </section>
