@@ -6,6 +6,8 @@ import Home from './Components/Home';
 import Footer from './Components/Footer';
 import Login from './Components/Login/Login';
 import { UserStorage } from './userContext';
+import User from './Components/User/User';
+import ProtectedRoute from './Components/Helper/ProtectedRoute';
 function App() {
   return (
     <div>
@@ -15,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login/*" element={<Login />} />
+            <Route path="/account/*" element={<ProtectedRoute><User /></ProtectedRoute>} />
           </Routes>
           <Footer />
         </UserStorage>
