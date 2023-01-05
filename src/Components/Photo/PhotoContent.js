@@ -2,7 +2,11 @@ import React from 'react'
 import styles from './PhotoContent.module.css';
 import { Link } from 'react-router-dom'
 import PhotoComments from './PhotoComments';
+import { UserContext } from '../../userContext';
+import PhotoDelete from './PhotoDelete';
+
 function PhotoContent({ data }) {
+    const user = React.useContext(UserContext)
     const { photo, comments } = data
     return (
         <div className={styles.photo}>
@@ -11,8 +15,11 @@ function PhotoContent({ data }) {
             </div>
             <div className={styles.details}>
                 <div>
-                    <p>
-                        <Link to={`/profile/${photo.author}`}>@{photo.author}</Link>
+                    <p className={styles.author}>
+                        {user.data && user.data.username === photo.author ?
+                            <PhotoDelete id={photo.id} /> :
+                            <Link to={`/profile/${photo.author}`}>@{photo.author}</Link>
+                        }
                         <span className={styles.visualizacoes}>{photo.acessos}</span>
                     </p>
                     <h1 className='title'>
