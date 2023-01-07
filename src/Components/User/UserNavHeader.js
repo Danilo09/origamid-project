@@ -10,7 +10,7 @@ import useMedia from '../../Hooks/useMedia';
 
 function UserNavHeader() {
     const { userLogout } = React.useContext(UserContext);
-
+    // width from screen
     const mobile = useMedia('(max-width: 40rem)');
     const [mobileMenu, setMobileMenu] = React.useState(false);
 
