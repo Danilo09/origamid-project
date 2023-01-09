@@ -9,6 +9,7 @@ import Image from '../Helper/Image';
 function PhotoContent({ data }) {
     const user = React.useContext(UserContext)
     const { photo, comments } = data
+    console.log(photo.src)
     return (
         <div className={styles.photo}>
             <div className={styles.img}>
