@@ -6,12 +6,12 @@ import { UserContext } from '../../userContext';
 import PhotoDelete from './PhotoDelete';
 import Image from '../Helper/Image';
 
-function PhotoContent({ data }) {
+function PhotoContent({ data, single }) {
     const user = React.useContext(UserContext)
     const { photo, comments } = data
     console.log(photo.src)
     return (
-        <div className={styles.photo}>
+        <div className={`${styles.photo} ${single ? styles.single : ''}`}>
             <div className={styles.img}>
                 <Image src={photo.src} alt={photo.title} />
             </div>
@@ -33,7 +33,7 @@ function PhotoContent({ data }) {
                     </ul>
                 </div>
             </div>
-            <PhotoComments id={photo.id} comments={comments} />
+            <PhotoComments single={single} id={photo.id} comments={comments} />
         </div>
     )
 }
