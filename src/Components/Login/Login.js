@@ -6,7 +6,7 @@ import LoginForm from './LoginForm'
 import LoginLost from './LoginLost'
 import LoginReset from './LoginReset'
 import styles from './Login.module.css'
-import NotFound from '../../NotFound'
+import NotFound from '../NotFound'
 
 const Login = () => {
 
