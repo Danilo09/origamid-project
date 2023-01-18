@@ -30,7 +30,7 @@ function LoginForm() {
                 <Input label="Password" type="password" name="password" {...password} />
                 {loading ? <button disabled>Carregando ...</button> : <Button>Entrar</Button>}
 
-                <Error error={error} />
+                <Error error={error && 'Dados incorretos'} />
             </form>
             <Link className={styles.lost} to="/login/lost">Perdeu a senha?</Link>
             <div className={styles.register}>

@@ -33,7 +33,7 @@ function LoginReset() {
     }
 
     return (
-        <div>
+        <section className='animeLeft'>
             <Head title="Resetar senha" />
             <h1 className='title'>Resete a Senha</h1>
             <form onSubmit={handleSubmit}>
@@ -41,7 +41,7 @@ function LoginReset() {
                 {loading ? <Button disabled>Resetando...</Button> : <Button>Resetar</Button>}
             </form>
             <Error error={error} />
-        </div>
+        </section>
     )
 }
 
