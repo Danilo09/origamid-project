@@ -1,5 +1,8 @@
 # Hello everyone! 
 
+<img width="1440" alt="Project Dogs" src="https://github.com/Danilo09/origamid-project/assets/11212886/d2bdb38a-0a79-4770-84bc-60758b688861">
+
+
 ### Resume:
 
 This app was built in order to practice and get knowledge about an application using REACTJS.
