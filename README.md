@@ -6,6 +6,7 @@
 ### Resume:
 
 This app was built in order to practice and get knowledge about an application using REACTJS.
+- This project is a social media where you are able to create a login, upload photos and comment with another users.
 
 * It is important to know, this project was created following a course Complete ReactJS at Origamid.
 
